@@ -1,4 +1,4 @@
-package br.com.harisson.exerciciossb.models;
+package br.com.harisson.exerciciossb.model.entities;
 
 public class Cliente {
 
