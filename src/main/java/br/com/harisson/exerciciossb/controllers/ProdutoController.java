@@ -17,8 +17,15 @@ public class ProdutoController {
 	private ProdutoRepository produtoRepository;
 
 	@PostMapping
-	public @ResponseBody Produto newProduct(@RequestParam String name) {
-		Produto produto = new Produto(name);
+	public @ResponseBody Produto newProduct(@RequestParam String name, @RequestParam double price, @RequestParam double sale) {
+		Produto produto = new Produto(name, price, sale);
+		produtoRepository.save(produto);
+		return produto;
+	}
+	
+	// OUTRA FORMA DE FAZER, TESTANDO QUANDO SE TEM VARIOS ATRIBUTOS
+	@PostMapping("/testObject")
+	public @ResponseBody Produto newProductObject(Produto produto) {
 		produtoRepository.save(produto);
 		return produto;
 	}
