@@ -12,19 +12,19 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	private String nome;
-	private double preco;
-	private double desconto;
+	private String name;
+	private double price;
+	private double sale;
 
 	public Produto() {
 
 	}
 
-	public Produto(String nome, double preco, double desconto) {
+	public Produto(String name, double price, double sale) {
 		super();
-		this.nome = nome;
-		this.preco = preco;
-		this.desconto = desconto;
+		this.name = name;
+		this.price = price;
+		this.sale = sale;
 	}
 
 	public int getId() {
@@ -35,28 +35,28 @@ public class Produto {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public double getPreco() {
-		return preco;
+	public double getPrice() {
+		return price;
 	}
 
-	public void setPreco(double preco) {
-		this.preco = preco;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
-	public double getDesconto() {
-		return desconto;
+	public double getSale() {
+		return sale;
 	}
 
-	public void setDesconto(double desconto) {
-		this.desconto = desconto;
+	public void setSale(double sale) {
+		this.sale = sale;
 	}
 
 }
